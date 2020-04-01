@@ -1,0 +1,46 @@
+<html>
+
+    <head>
+        <title> Emergency Response </title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" style="font-size: 25; text-align: center;">
+                    <br><br>
+                    <h1> Please Help Us Identify the Type of Emergency Responder </h1>
+                    <br><br>
+                    <form action="/respond/{{objId}}" method="POST">
+                        <input type="checkbox" name="police" value="police">
+                        <label for="police">Police</label><br>
+                        <input type="checkbox" name="ambulance" value="ambulance">
+                        <label for="ambulance">Ambulance</label><br>
+                        <input type="checkbox" name="fire_brigade" value="fire_brigade">
+                        <label for="fire_brigade">Fire Brigade</label><br>
+
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
+                {%for i in images%}
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <img src="{{i}}"/>
+                    </div>
+                {%endfor%}
+            </div>
+            <form>
+
+            </form>
+            
+
+            <br><br>
+            <br><br>
+            <h4>This is a College Project Test Website</h4>
+        </div>
+
+        
+    </body>
+</html>
