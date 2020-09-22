@@ -5,6 +5,14 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
          rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
+
+      <style>
+        .imgs {
+          max-width: 100%;
+        }
+    </style>
+
+
     <body>
         <div class="container">
             <div class="row">
@@ -19,6 +27,8 @@
                         <label for="ambulance">Ambulance</label><br>
                         <input type="checkbox" name="fire_brigade" value="fire_brigade">
                         <label for="fire_brigade">Fire Brigade</label><br>
+                        <input type="checkbox" name="false_alarm" value="false_alarm">
+                        <label for="false_alarm">False Alarm</label><br>
 
 
                         <input type="submit" value="Submit">
@@ -27,7 +37,7 @@
 
                 {%for i in images%}
                     <div class="col-lg-3 col-md-3 col-sm-6">
-                        <img src="{{i}}"/>
+                        <img class="imgs" src="{{i}}"/>
                     </div>
                 {%endfor%}
             </div>
